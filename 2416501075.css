@@ -1,0 +1,432 @@
+/* Ad Soyad = 2416501075 */
+
+:root {
+    /* Öğrenci numarası */
+    --no: 2416501075;
+
+    /* 2416501075 mod 360 = 355
+       Tasarımın yeşil olması için yeşil ton kullanılmıştır. */
+    --ton: 120;
+
+    --renk-ana: hsl(var(--ton) 65% 38%);
+    --renk-zemin: hsl(var(--ton) 30% 97%);
+    --renk-acik: hsl(var(--ton) 35% 93%);
+
+    --renk-yazi: #263326;
+    --renk-kenar: #a9c5aa;
+
+    --font: "Palatino Linotype", "Times New Roman", serif;
+
+    --bosluk-m: 1rem;
+    --kose: 8px;
+}
+
+
+/* GENEL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+
+    font-family: var(--font);
+
+    background-color: var(--renk-zemin);
+    color: var(--renk-yazi);
+
+    overflow-x: hidden;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: var(--renk-ana);
+    color: white;
+
+    padding: var(--bosluk-m);
+}
+
+header h1 {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    font-size: 1.6rem;
+}
+
+header p {
+    max-width: 1100px;
+
+    margin: 0.5rem auto 0;
+
+    line-height: 1.5;
+}
+
+
+/* NAVİGASYON */
+
+nav {
+    background-color: var(--renk-ana);
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: var(--bosluk-m);
+
+    padding: 0 var(--bosluk-m) var(--bosluk-m);
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* ANA İÇERİK */
+
+main {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: var(--bosluk-m);
+}
+
+main h2 {
+    color: var(--renk-ana);
+}
+
+
+/* ETKİNLİK LİSTESİ */
+
+.etkinlik-listesi {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: var(--bosluk-m);
+}
+
+
+/* ETKİNLİK KARTI */
+
+.etkinlik-karti {
+    background-color: white;
+
+    padding: var(--bosluk-m);
+
+    border: 1px solid var(--renk-kenar);
+
+    border-radius: var(--kose);
+}
+
+.etkinlik-karti h3 {
+    margin-top: 0;
+
+    color: var(--renk-ana);
+}
+
+.etkinlik-karti p {
+    line-height: 1.5;
+}
+
+.etkinlik-karti a {
+    color: var(--renk-ana);
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.etkinlik-karti a:hover {
+    text-decoration: underline;
+}
+
+
+/* INDEX SAYFASINDAKİ YAKLAŞAN ETKİNLİKLER */
+
+.yaklasan-etkinlikler {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: var(--bosluk-m);
+
+    margin-bottom: var(--bosluk-m);
+}
+
+
+/* INDEX KARTLARI */
+
+.yaklasan-etkinlikler .etkinlik-karti {
+    border-top: 5px solid var(--renk-ana);
+}
+
+.yaklasan-etkinlikler .etkinlik-karti h3 {
+    margin-top: 0;
+}
+
+
+/* TÜMÜNÜ GÖR */
+
+.tumunu-gor {
+    color: var(--renk-ana);
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.tumunu-gor:hover {
+    text-decoration: underline;
+}
+
+
+/* ETKİNLİK DETAY */
+
+.detay {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: var(--bosluk-m);
+
+    align-items: start;
+}
+
+.detay figure {
+    margin: 0;
+}
+
+.detay img {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    border-radius: var(--kose);
+}
+
+.detay figcaption {
+    margin-top: 0.5rem;
+
+    font-size: 0.8rem;
+}
+
+.detay dl {
+    background-color: white;
+
+    margin: 0;
+
+    padding: var(--bosluk-m);
+
+    border: 1px solid var(--renk-kenar);
+
+    border-radius: var(--kose);
+}
+
+.detay dt {
+    color: var(--renk-ana);
+
+    font-weight: bold;
+
+    margin-top: 0.7rem;
+}
+
+.detay dd {
+    margin: 0.2rem 0 0;
+}
+
+
+/* FORM */
+
+form {
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    background-color: white;
+
+    padding: var(--bosluk-m);
+
+    border: 1px solid var(--renk-kenar);
+
+    border-radius: var(--kose);
+}
+
+form div {
+    margin-bottom: var(--bosluk-m);
+}
+
+form h2 {
+    color: var(--renk-ana);
+}
+
+
+/* LABEL */
+
+label {
+    display: block;
+
+    margin-bottom: 0.4rem;
+
+    color: var(--renk-ana);
+
+    font-weight: bold;
+}
+
+
+/* FORM ELEMANLARI */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 0.7rem;
+
+    font-family: var(--font);
+
+    font-size: 1rem;
+
+    border: 1px solid var(--renk-kenar);
+
+    border-radius: var(--kose);
+
+    background-color: white;
+
+    color: var(--renk-yazi);
+}
+
+textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+/* FORM HATALARI */
+
+input:invalid:not(:placeholder-shown),
+select:invalid,
+textarea:invalid:not(:placeholder-shown) {
+    border: 2px solid #b42318;
+}
+
+
+/* BUTON */
+
+button {
+    padding: 0.7rem 1.2rem;
+
+    border: none;
+
+    border-radius: var(--kose);
+
+    background-color: var(--renk-ana);
+
+    color: white;
+
+    font-family: var(--font);
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1f5c24;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: var(--bosluk-m);
+
+    color: var(--renk-ana);
+
+    font-size: 0.8rem;
+
+    text-align: center;
+}
+
+
+/* TELEFON */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        justify-content: flex-start;
+
+        gap: 0.5rem;
+
+        padding: 0 var(--bosluk-m) var(--bosluk-m);
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .etkinlik-listesi {
+        grid-template-columns: 1fr;
+    }
+
+    .yaklasan-etkinlikler {
+        grid-template-columns: 1fr;
+    }
+
+    .detay {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        max-width: 100%;
+    }
+
+    .etkinlik-karti {
+        width: 100%;
+    }
+}

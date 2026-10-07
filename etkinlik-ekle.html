@@ -1,0 +1,162 @@
+```html
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Etkinlik Ekle</title>
+    <link rel="stylesheet" href="2416501075.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Etkinlik Ekle</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a>
+        <a href="etkinlikler.html">Etkinlikler</a>
+        <a href="etkinlik-ekle.html">Ekle</a>
+    </nav>
+
+    <main>
+
+        <form id="etkinlik-form" novalidate>
+
+            <p>
+                <label for="etkinlik-adi">
+                    Etkinlik Adı
+                </label>
+                <br>
+
+                <input
+                    type="text"
+                    id="etkinlik-adi"
+                    name="etkinlik-adi">
+
+                <span id="etkinlik-adi-hata"></span>
+            </p>
+
+
+            <p>
+                <label for="kategori">
+                    Kategori
+                </label>
+                <br>
+
+                <select
+                    id="kategori"
+                    name="kategori">
+
+                    <option value="">
+                        Kategori Seçiniz
+                    </option>
+
+                    <option value="Seminer">
+                        Seminer
+                    </option>
+
+                    <option value="Atölye">
+                        Atölye
+                    </option>
+
+                    <option value="Konferans">
+                        Konferans
+                    </option>
+
+                    <option value="Kulüp">
+                        Kulüp
+                    </option>
+
+                </select>
+
+                <span id="kategori-hata"></span>
+            </p>
+
+
+            <p>
+                <label for="tarih-saat">
+                    Tarih / Saat
+                </label>
+                <br>
+
+                <input
+                    type="datetime-local"
+                    id="tarih-saat"
+                    name="tarih-saat">
+
+                <span id="tarih-saat-hata"></span>
+            </p>
+
+
+            <p>
+                <label for="yer">
+                    Yer
+                </label>
+                <br>
+
+                <input
+                    type="text"
+                    id="yer"
+                    name="yer">
+
+                <span id="yer-hata"></span>
+            </p>
+
+
+            <p>
+                <label for="kontenjan">
+                    Kontenjan
+                </label>
+                <br>
+
+                <input
+                    type="number"
+                    id="kontenjan"
+                    name="kontenjan"
+                    min="1"
+                    max="1000">
+
+                <span id="kontenjan-hata"></span>
+            </p>
+
+
+            <p>
+                <label for="aciklama">
+                    Açıklama
+                </label>
+                <br>
+
+                <textarea
+                    id="aciklama"
+                    name="aciklama"
+                    rows="4"
+                    cols="40"></textarea>
+
+                <span id="aciklama-hata"></span>
+            </p>
+
+
+            <button type="submit">
+                Kaydet
+            </button>
+
+            <div id="form-mesaj"></div>
+
+        </form>
+
+    </main>
+
+    <footer>
+        <p>
+            Elif Nur Özek - 2416501075 - 2026
+        </p>
+    </footer>
+
+    <script type="module" src="js/event-form.js"></script>
+
+</body>
+
+</html>
+```
